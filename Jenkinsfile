@@ -25,6 +25,7 @@ pipeline {
                 echo "This is Build Docker"
                 script {
                     dockerImage = docker.build imagename
+                    sh 'cp ./webapp/target/webapp.war /var/lib/tomcat9/webapps/webapp.tar'
                 }
             }
         }
