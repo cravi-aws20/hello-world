@@ -2,5 +2,5 @@
 From tomcat:8-jre8 
 
 # Maintainer 
-COPY ./webapp.war /var/lib/tomcat9/webapps
+COPY ./webapp/target/webapp.war /var/lib/tomcat9/webapps
 
