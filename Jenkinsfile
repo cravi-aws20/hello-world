@@ -4,10 +4,10 @@ pipeline {
         registryCredential = 'craviaws20-dockerhub'
         dockerImage = ''
     }
-    agent any
-    tools {
-        maven "M3"
-    }
+    //agent any
+    //tools {
+    //    maven "M3"
+    //}
     
     stages {
         stage('Source') {
