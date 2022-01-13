@@ -4,7 +4,7 @@ pipeline {
         registryCredential = 'craviaws20-dockerhub'
         dockerImage = ''
     }
-    //agent any
+    agent any
     //tools {
     //    maven "M3"
     //}
