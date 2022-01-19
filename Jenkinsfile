@@ -22,7 +22,9 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh 'mvn Sonar:Sonar'
+                withSonarQubeEnv() {
+                sh "${mvn}/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=New"
+                }
             }
         }
         stage('Build-Docker') {
