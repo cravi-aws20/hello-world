@@ -32,7 +32,7 @@ pipeline {
                 echo "This is Build Docker"
                 script {
                     dockerImage = docker.build imagename
-                    sh 'cp ./webapp/target/webapp.war /var/lib/tomcat9/webapps/webapp.war'
+                    //sh 'cp ./webapp/target/webapp.war /var/lib/tomcat9/webapps/webapp.war'
                 }
             }
         }
@@ -40,9 +40,10 @@ pipeline {
             steps {
                 echo "This is Deploy stage"
                 script {
-                    docker.withRegistry( '', registryCredential ) {
-                        dockerImage.push("$BUILD_NUMBER")
-                        dockerImage.push('latest')
+                    //docker.withRegistry( '', registryCredential ) {
+                    //    dockerImage.push("$BUILD_NUMBER")
+                    //    dockerImage.push('latest')
+                    sh 'cp ./webapp/target/webapp.war /var/lib/tomcat9/webapps/webapp.war'
                     }
                 }        
             }
