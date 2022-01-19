@@ -7,6 +7,7 @@ pipeline {
     agent any
     tools {
         maven "M3"
+        sonarqube "Sonar"
     }
     
     stages {
@@ -18,6 +19,11 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'mvn clean install -Dmaven.test.skip=true'    
+            }
+        }
+        stage('Test') {
+            steps {
+                sh 'mvn Sonar:Sonar'
             }
         }
         stage('Build-Docker') {
