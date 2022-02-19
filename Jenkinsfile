@@ -44,7 +44,7 @@ pipeline {
                     //    dockerImage.push("$BUILD_NUMBER")
                     //    dockerImage.push('latest')
                     //sh 'cp ./webapp/target/webapp.war /var/lib/tomcat9/webapps/webapp.war'
-                    echo Hi....
+                    sh 'echo Hi....'
                     //}
                 }        
             }
