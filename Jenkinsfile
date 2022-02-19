@@ -10,11 +10,11 @@ pipeline {
     }
     
     stages {
-    #    stage('Source') {
-    #       steps {
-     #           git credentialsId: 'gituserid', url: 'https://github.com/cravi-aws20/hello-world.git'    
-      #      }
-       # }
+    //    stage('Source') {
+    //      steps {
+    //           git credentialsId: 'gituserid', url: 'https://github.com/cravi-aws20/hello-world.git'    
+    //      }
+    //    }
         stage('Build') {
             steps {
                 sh 'mvn clean install -Dmaven.test.skip=true'    
