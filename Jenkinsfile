@@ -43,7 +43,7 @@ pipeline {
                     //docker.withRegistry( '', registryCredential ) {
                     //    dockerImage.push("$BUILD_NUMBER")
                     //    dockerImage.push('latest')
-                    sh 'cp ./webapp/target/webapp.war /var/lib/tomcat9/webapps/webapp.war'
+                    //sh 'cp ./webapp/target/webapp.war /var/lib/tomcat9/webapps/webapp.war'
                     //}
                 }        
             }
