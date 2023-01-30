@@ -17,3 +17,5 @@ open jenkins --> create global crentials with "Secret text" option and given the
 go to configure systems --> enable global environment under sonarqube tab --->advanced --->give name and ip address(user http://publicip:9000) given token credentials we generated.
 go to global configuration ---> got to sonarscanner tab and select installation and save it.
 under plugin install sonarscanner plugin.... (this is actually 15th step, please read this as there)
+
+  
