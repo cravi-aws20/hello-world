@@ -19,3 +19,4 @@ RUN echo $WORKDIR
 COPY --from=new /src/new1/webapp.war /var/lib/tomcat9/webapps/webapp.war
  
 #COPY ./webapp/target/webapp.war /var/lib/tomcat9/webapps/webapp.war
+
